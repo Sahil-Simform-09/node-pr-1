@@ -20,17 +20,21 @@ const validCurrentTime = input => {
     return pattern.test(input);
 }
 const getOffset = currentTimeZone => {
-    const buffer =  fs.readFileSync('timezones.json');
-    const zones = JSON.parse(buffer);
-    let offset = -1;
-    zones.forEach( zone => {
-        const timeZone = zone.abbr;
-        if(currentTimeZone === timeZone) {
-            offset = zone.offset;
-            return;
-        }
-    });
-    return offset;
+    try{
+        const buffer =  fs.readFileSync('timezones.json');
+        const zones = JSON.parse(buffer);
+        let offset = -1;
+        zones.forEach( zone => {
+            const timeZone = zone.abbr;
+            if(currentTimeZone === timeZone) {
+                offset = zone.offset;
+                return;
+            }
+        });
+        return offset;
+    } catch(err) {
+        throw new Error(err);
+    }
 }
  const startApp = async() => {
     const currentTime = await readLineAsync('CURRENT_TIME: ');

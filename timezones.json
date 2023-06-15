@@ -457,16 +457,6 @@
     ]
   },
   {
-    "value": "Bahia Standard Time",
-    "abbr": "BST",
-    "offset": -3,
-    "isdst": false,
-    "text": "(UTC-03:00) Salvador",
-    "utc": [
-      "America/Bahia"
-    ]
-  },
-  {
     "value": "UTC-02",
     "abbr": "U",
     "offset": -2,
@@ -536,19 +526,6 @@
     "offset": 0,
     "isdst": false,
     "text": "(UTC) Edinburgh, London",
-    "utc": [
-      "Europe/Isle_of_Man",
-      "Europe/Guernsey",
-      "Europe/Jersey",
-      "Europe/London"
-    ]
-  },
-  {
-    "value": "British Summer Time",
-    "abbr": "BST",
-    "offset": 1,
-    "isdst": true,
-    "text": "(UTC+01:00) Edinburgh, London",
     "utc": [
       "Europe/Isle_of_Man",
       "Europe/Guernsey",
